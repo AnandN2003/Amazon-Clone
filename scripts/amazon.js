@@ -21,7 +21,7 @@ let producthtml = '';
               </div>
 
               <div class="product-price">
-                $${product.price/100}
+                $${product.price/100 }
               </div>
 
               <div class="product-quantity-container">
