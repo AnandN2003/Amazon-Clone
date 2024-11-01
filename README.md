@@ -6,12 +6,12 @@ The provided code represents the HTML and CSS code for an Amazon clone website. 
 
 The HTML code defines the structure of the webpage, including the header, search bar, navigation menu, hero section, shop section, and footer. The CSS code contains styles to customize the appearance of various elements on the webpage.
 
-Features
--> Home page with a product listing
--> Product details page
--> Shopping cart with add/remove functionality
--> Responsive layout for mobile, tablet, and desktop views
-Technologies Used
--> HTML for the structure
--> Tailwind CSS for styling and responsive design
--> JavaScript for functionality and interactivity
+## Features
+- Home page with a product listing
+- Product details page
+- Shopping cart with add/remove functionality
+- Responsive layout for mobile, tablet, and desktop views
+## Technologies Used
+- **HTML** for the structure
+- **Tailwind CSS** for styling and responsive design
+- **JavaScript** for functionality and interactivity
