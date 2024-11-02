@@ -8,7 +8,7 @@ The HTML code defines the structure of the webpage, including the header, search
 
 ## Features
 - Home page with a product listing
-- Product details page
+- Product details page and resources
 - Shopping cart with add/remove functionality
 - Responsive layout for mobile, tablet, and desktop views
 ## Technologies Used
