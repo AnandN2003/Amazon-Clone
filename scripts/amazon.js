@@ -62,7 +62,7 @@ let producthtml = '';
           button.addEventListener('click',()=>{
             let productId = button.dataset.productId;
             
-            let matchingitem;
+            let matchingitem; // to calculate the number of same items bought
             cart.forEach((item)=>{
               if(productId == item.productId){
                 matchingitem = item;
@@ -77,6 +77,12 @@ let producthtml = '';
                 quantity: 1
               });
             }
-            console.log(cart);
+
+            let cartquantity = 0; // to calculate total number of items added int the cart
+            
+            cart.forEach((item)=>{
+              cartquantity += item.quantity;
+            });
+            document.querySelector('.js-cart-quantity').innerHTML = cartquantity;
         });
       });
