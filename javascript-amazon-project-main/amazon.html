@@ -45,7 +45,7 @@
 
         <a class="cart-link header-link" href="checkout.html">
           <img class="cart-icon" src="images/icons/cart-icon.png">
-          <div class="cart-quantity js-cart-quantity">1</div>
+          <div class="cart-quantity js-cart-quantity">0</div>
           <div class="cart-text">Cart</div>
         </a>
       </div>
@@ -55,8 +55,9 @@
       <div class="products-grid js-products-grid">
       </div>
     </div>
-    <script src="data/cart.js"></script>
     <script src="data/products.js"></script><!--this js files loads all the products discription as an object-->
-    <script src="../scripts/amazon.js"></script><!--this js file loops through all these products and -->
+    <script type="module" src="../scripts/amazon.js"></script><!--this js file loops through all these products and -->
+    <!--module helps us avoid naming conflicts
+        with modules we dont have to worry about the order of files declaration-->
   </body>
 </html>

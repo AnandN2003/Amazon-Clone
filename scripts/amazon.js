@@ -1,3 +1,5 @@
+import {cart} from '../javascript-amazon-project-main/data/cart.js';// we need to put all the importds at the top of the file
+//inorder to use imports we must use live server only
 let producthtml = '';
 
       products.forEach((product)=>{
