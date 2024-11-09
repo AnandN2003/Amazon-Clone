@@ -1,4 +1,4 @@
-import {cart} from '../javascript-amazon-project-main/data/cart.js';// we need to put all the importds at the top of the file
+import {cart, addtocart} from '../javascript-amazon-project-main/data/cart.js';// we need to put all the importds at the top of the file
 import {products} from '../javascript-amazon-project-main/data/products.js';
 //inorder to use imports we must use live server only
 let producthtml = '';
@@ -60,32 +60,20 @@ let producthtml = '';
       console.log(producthtml);
       document.querySelector('.js-products-grid').innerHTML = producthtml;
 
-      document.querySelectorAll('.js-add-to-cart')
-        .forEach((button)=>{
-          button.addEventListener('click',()=>{
-            let productId = button.dataset.productId;
-            
-            let matchingitem; // to calculate the number of same items bought
-            cart.forEach((item)=>{
-              if(productId == item.productId){
-                matchingitem = item;
-              }
-            });
-            if(matchingitem){
-              matchingitem.quantity++;
-            }
-            else{
-              cart.push({
-                productId:productId,
-                quantity: 1
-              });
-            }
-
-            let cartquantity = 0; // to calculate total number of items added int the cart
+      function updatecartquantity(){
+        let cartquantity = 0; // to calculate total number of items added int the cart
             
             cart.forEach((item)=>{
               cartquantity += item.quantity;
             });
             document.querySelector('.js-cart-quantity').innerHTML = cartquantity;
+      }
+
+      document.querySelectorAll('.js-add-to-cart')
+        .forEach((button)=>{
+          button.addEventListener('click',()=>{
+            let productId = button.dataset.productId;
+            addtocart(productId);
+            updatecartquantity();
         });
       });
