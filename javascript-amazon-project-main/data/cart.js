@@ -16,4 +16,5 @@ export function addtocart(productId){
             quantity: 1
           });
         }
+        console.log('hi this is anand fuck');
   }
